@@ -1,0 +1,37 @@
+{
+  "name": "vite-vue2-cypress-test",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "module": "src/index.ts",
+  "main": "dist/index.umd.js",
+  "types": "dist",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite --force",
+    "test": "start-server-and-test dev 2200 'pnpm run test:cy:run:component && pnpm run test:cy:run:e2e'",
+    "test:cy:open": "npx cypress open",
+    "test:cy:run:component": "npx cypress run  --component --browser=chrome",
+    "test:cy:run:e2e": "npx cypress run --e2e --browser=chrome",
+    "build": "vue-tsc --noEmit && vite build && vue-tsc --declaration --emitDeclarationOnly"
+  },
+  "peerDependencies": {
+    "vue": "2.6.14"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "cypress": "~12.1.0",
+    "typescript": "~4.9.3",
+    "vite": "~4.1.1",
+    "vite-plugin-vue2": "~2.0.2",
+    "vue": "2.6.14",
+    "vue-tsc": "~0.40.7",
+    "vue-template-compiler": "2.6.14",
+    "start-server-and-test": "~1.15.2"
+  }
+}

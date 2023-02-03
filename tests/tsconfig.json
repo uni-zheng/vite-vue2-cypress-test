@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "types": [
+      "node",
+      "cypress",
+      "dom"
+    ]
+  },
+  "references": [
+    {
+      "path": "../tsconfig.json"
+    }
+  ],
+  "files": [
+    "./component/Test.cy.ts",
+    "./e2e/Test.cy.ts",
+    "../cypress/support/commands.ts",
+    "../cypress/support/component.ts",
+    "../cypress/support/e2e.ts"
+  ],
+  "include": [
+    "./",
+    "../cypress"
+  ]
+}
