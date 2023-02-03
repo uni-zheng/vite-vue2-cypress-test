@@ -1,5 +1,5 @@
-describe('empty spec', () => {
-  it('BFS 图片', () => {
+describe('e2e', () => {
+  it('Test', () => {
     cy.visit('https://ff-dev.bilibili.com/?_port_=2200')
 
     cy
